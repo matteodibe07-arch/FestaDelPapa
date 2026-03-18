@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buona Festa del Papà, Pablo! 💙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0B1026;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 80px;
+            background: linear-gradient(145deg, #0B1026 0%, #1a1f3a 100%);
+            border-bottom: 5px solid #F15A24;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🏉⚡🏎️";
+            font-size: 120px;
+            opacity: 0.03;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            letter-spacing: 30px;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: #F15A24;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #fff;
+            border-bottom: 2px dashed #F15A24;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 20px auto;
+            background: rgba(11, 16, 38, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #F15A24;
+            backdrop-filter: blur(3px);
+        }
+
+        .gallery {
+            padding: 60px 0;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #F15A24;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .gallery h2::after {
+            content: "⚡";
+            font-size: 2rem;
+            margin-left: 15px;
+            opacity: 0.7;
+        }
+
+        .gallery h2::before {
+            content: "🏉";
+            font-size: 2rem;
+            margin-right: 15px;
+            opacity: 0.7;
+        }
+
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .photo-card {
+            background: #1a1f3a;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            border-bottom: 3px solid #F15A24;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid #F15A24;
+        }
+
+        .photo-caption {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            background: #0f142e;
+        }
+
+        .photo-caption strong {
+            color: #F15A24;
+        }
+
+        .dedica {
+            background: linear-gradient(135deg, #F15A24 0%, #c43c0c 100%);
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(241, 90, 36, 0.3);
+        }
+
+        .dedica h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0B1026;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .dedica p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #fff;
+            font-style: italic;
+        }
+
+        .firma {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #0B1026;
+            border-top: 2px solid #0B1026;
+            display: inline-block;
+            padding-top: 15px;
+        }
+
+        .passioni {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 60px 0;
+        }
+
+        .passione-card {
+            background: #1a1f3a;
+            padding: 35px 25px;
+            border-radius: 15px;
+            flex: 1 1 250px;
+            text-align: center;
+            border-top: 5px solid #F15A24;
+            transition: all 0.3s;
+        }
+
+        .passione-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(241, 90, 36, 0.5);
+        }
+
+        .passione-icon {
+            font-size: 5rem;
+            margin-bottom: 15px;
+        }
+
+        .passione-card h4 {
+            font-size: 2rem;
+            color: #F15A24;
+            margin-bottom: 15px;
+        }
+
+        .passione-card p {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .fiat-special {
+            background: #0f142e;
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            border: 2px solid #F15A24;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            border-top: 1px solid #F15A24;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .subtitle { font-size: 1.3rem; }
+            .dedica p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <h1>A Papà Pablo</h1>
+            <div class="subtitle">🏉 Forza e Passione 🏎️</div>
+            <p>
+                Grazie per avermi insegnato che nella vita, come in una partita di rugby, 
+                bisogna sempre andare avanti con determinazione. E come sulla tua amata 500, 
+                anche quando la strada è in salita, si viaggia con stile e col cuore in moto. 
+                Sei il mio campione, dentro e fuori dal campo.
+            </p>
+        </div>
+    </div>
+
+    <div class="container gallery">
+        <h2>I nostri momenti</h2>
+        <div class="photo-grid">
+            <!-- FOTO 1 -->
+            <div class="photo-card">
+                <img src="foto/foto1.jpg" alt="Pablo tutto fare">
+                <div class="photo-caption">
+                    <strong>Il nostro tutto fare</strong> - Sempre pronto a sporcarsi le mani
+                </div>
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="photo-card">
+                <img src="foto/foto2.jpg" alt="Il triumvirato">
+                <div class="photo-caption">
+                    <strong>Il triumvirato riunito</strong> - Nessuno è più forte di noi
+                </div>
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="photo-card">
+                <img src="foto/foto3.jpg" alt="Altro ricordo speciale">
+                <div class="photo-caption">
+                    <strong>Un'altra perla</strong> - Da custodire
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dedica">
+            <h3>Grazie Papà</h3>
+            <p>
+                "Per ogni meta che mi hai insegnato a segnare, per ogni curva presa col sorriso,<br>
+                per ogni domenica passata insieme.<br>
+                Se oggi so cos'è la passione, lo devo a te."
+            </p>
+            <div class="firma">
+                Con tutto il cuore, <br> il tuo Matteo 💙
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="passioni">
+            <div class="passione-card">
+                <div class="passione-icon">🏉</div>
+                <h4>Rugby</h4>
+                <p>Forza, disciplina, squadra. Come nella vita. </p>
+            </div>
+            <div class="passione-card">
+                <div class="passione-icon">🏎️</div>
+                <h4>Motori</h4>
+                <p>La passione che corre veloce. Dai motori rombanti alle domeniche passate in garage insieme.</p>
+            </div>
+            <div class="passione-card">
+                <div class="passione-icon">🚗</div>
+                <h4>La 500</h4>
+                <p>La regina di casa. Un pezzo di storia che profuma di te, papà.</p>
+                <div class="fiat-special">★ La preferita ★</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Con affetto, per la festa del papà 2026 • Creato per il miglior papà del mondo, Pablo.
+    </footer>
+
+</body>
+</html>
